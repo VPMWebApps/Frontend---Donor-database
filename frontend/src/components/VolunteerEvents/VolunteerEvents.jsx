@@ -2,11 +2,11 @@ function VolunteerEvents() {
   return (
     <div className="p-6">
       <img
-        src="Frontend/src/assets/sdgl_1.png "
+        src="src/images/vpm_pic1.jpg"
         alt="Event Group"
-        className="w-full max-h-[400px] object-cover rounded-xl mb-6"
-      />
-      <h2 className="text-xl  font-bold mb-4">VOLUNTEERING EVENT</h2>
+        className="w-full max-h-[500px] object-contain xl mb-6"
+        />
+      <h2 className="text-xl font-bold mb-4">VOLUNTEERING EVENT</h2>
 
       <div className="bg-white p-4 rounded-xl shadow mb-4 flex items-start gap-4">
         <div className="bg-gray-800 text-white rounded-full px-4 py-2 text-center">

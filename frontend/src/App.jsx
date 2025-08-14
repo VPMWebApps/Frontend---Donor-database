@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/individual-donor" element={<IndividualDonor />} />
           <Route path="/csr-donor" element={<CSRDonor />} />
-          <Route path="/" element={<VolunteerEvents />} />
+          <Route path="/event" element={<VolunteerEvents />} />
           <Route path="/research" element={<ResearchPrograms />} />
           <Route path="/csr-requirement" element={<CSRRequirement />} />
         </Routes>
