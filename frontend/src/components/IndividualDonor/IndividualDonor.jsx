@@ -25,8 +25,13 @@ const IndividualDonor = () => {
 
   return (
     <div className="p-6 bg-white min-h-screen">
-      <h1 className="text-3xl font-bold mb-4 tracking-tight">INDIVIDUAL DONOR</h1>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+        <h1 className="text-3xl font-bold mb-4 tracking-tight">INDIVIDUAL DONOR</h1>
+        <button className="px-4 py-2 rounded-md bg-purple-600 text-white cursor-pointer ">
+          Add donor
+        </button>
 
+      </div>
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <input
           type="text"
