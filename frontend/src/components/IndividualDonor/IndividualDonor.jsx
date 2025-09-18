@@ -12,6 +12,7 @@ const donors = [
 const IndividualDonor = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState('newest');
+  const [showBox, setShowBox] = useState(false);
 
   const sortedDonors = [...donors].sort((a, b) => {
     if (sortOrder === 'newest') return -1;
@@ -27,11 +28,13 @@ const IndividualDonor = () => {
     <div className="p-6 bg-white min-h-screen">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <h1 className="text-3xl font-bold mb-4 tracking-tight">INDIVIDUAL DONOR</h1>
-        <button className="px-4 py-2 rounded-md bg-purple-600 text-white cursor-pointer ">
+        <button 
+          className="px-4 py-2 rounded-md bg-purple-600 text-white cursor-pointer"
+          onClick={() => setShowBox(true)} >
           Add donor
         </button>
-
       </div>
+
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <input
           type="text"
@@ -56,6 +59,47 @@ const IndividualDonor = () => {
         </div>
       </div>
 
+      {/* Modal Box */}
+      {showBox && (
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-[2px] bg-opacity-30 z-50">
+          <div className="bg-white w-[400px] rounded-2xl shadow-xl p-6">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Add Donor</h2>
+
+            <div className="flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <input
+                type="text"
+                placeholder="Phone Number"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <input
+                type="text"
+                placeholder="WhatsApp Number"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+
+              {/* Close Button */}
+              <button
+                className="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition"
+                onClick={() => setShowBox(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Donor List */}
       <div className="space-y-4">
         {filteredDonors.map((donor, index) => (
           <div key={index} className="bg-gray-100 p-4 rounded-md shadow-sm">
