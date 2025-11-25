@@ -11,6 +11,7 @@ const Navbar = () => {
         <Link to="/research" className="text-pink-600 hover:underline">DONATE FOR RESEARCH</Link>
         <Link to="/csr-requirement" className="text-pink-600 hover:underline">CSR REQUIREMENT</Link>
         <Link to="/ngo-partners" className="text-pink-600 hover:underline">NGO PARTNERS</Link>
+        <Link to="/sponsor-sp" className="text-pink-600 hover:underline">SPONSOR STUDENT PROJECT</Link>
         
       </div>
     </nav>

@@ -6,6 +6,7 @@ import ResearchPrograms from "./components/ResearchPrograms/ResearchPrograms";
 import CSRDonor from "./components/CSRDonor/CSRDonor";
 import IndividualDonor from "./components/IndividualDonor/IndividualDonor";
 import NGOPartners from "./components/NGOPartners/NGOPartners";
+import Sponsor from "./components/Sponsor/Sponsor";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/research" element={<ResearchPrograms />} />
           <Route path="/csr-requirement" element={<CSRRequirement />} />
           <Route path="/ngo-partners" element={<NGOPartners />} />
+          <Route path="/sponsor-sp" element={<Sponsor />} />
         </Routes>
       </div>
     </Router>
