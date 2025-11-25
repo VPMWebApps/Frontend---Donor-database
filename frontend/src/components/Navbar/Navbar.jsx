@@ -6,10 +6,11 @@ const Navbar = () => {
       <h1 className="text-xl font-bold mb-2">VPM TRUST</h1>
       <div className="flex gap-6 flex-wrap justify-center text-sm font-semibold">
         <Link to="/individual-donor" className="text-pink-600 hover:underline">INDIVIDUAL DONOR</Link>
-        <Link to="/csr-donor" className="text-pink-600 font-medium hover:text-pink-800 transition-colors duration-200">CSR DONOR</Link>
+        <Link to="/csr-donor" className="text-pink-600 hover:text-pink-800 transition-colors duration-200">CSR DONOR</Link>
         <Link to="/" className="text-pink-600 hover:underline">VOLUNTEERING EVENT</Link>
         <Link to="/research" className="text-pink-600 hover:underline">DONATE FOR RESEARCH</Link>
         <Link to="/csr-requirement" className="text-pink-600 hover:underline">CSR REQUIREMENT</Link>
+        <Link to="/ngo-partners" className="text-pink-600 hover:underline">NGO PARTNERS</Link>
         
       </div>
     </nav>

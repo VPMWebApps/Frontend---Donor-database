@@ -5,6 +5,7 @@ import CSRRequirement from "./components/CSRRequirement/CSRRequirement";
 import ResearchPrograms from "./components/ResearchPrograms/ResearchPrograms";
 import CSRDonor from "./components/CSRDonor/CSRDonor";
 import IndividualDonor from "./components/IndividualDonor/IndividualDonor";
+import NGOPartners from "./components/NGOPartners/NGOPartners";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<VolunteerEvents />} />
           <Route path="/research" element={<ResearchPrograms />} />
           <Route path="/csr-requirement" element={<CSRRequirement />} />
+          <Route path="/ngo-partners" element={<NGOPartners />} />
         </Routes>
       </div>
     </Router>
