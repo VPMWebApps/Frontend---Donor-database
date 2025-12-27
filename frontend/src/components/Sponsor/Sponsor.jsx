@@ -5,11 +5,11 @@ const students = [
     id: 1,
     name: "Aarav Patil",
     grade: "8th",
-    category: "School Fees",
+    category: "Subscription",
     urgency: "High",
-    required: 15000,
+    required: 1500,
     raised: 6000,
-    summary: "Needs support to pay this year’s school fees.",
+    summary: "GPT Subscription support for Aarav.",
     background:
       "Aarav is a bright student from a low-income family. His parents are daily wage workers and struggle to pay full school fees.",
   },
@@ -17,25 +17,25 @@ const students = [
     id: 2,
     name: "Sneha Gupta",
     grade: "10th",
-    category: "Books & Stationery",
+    category: "Certificate Sponsorship",
     urgency: "Medium",
     required: 5000,
     raised: 2500,
-    summary: "Support Sneha with books and exam material.",
+    summary: "Support Sneha with latest project management course",
     background:
-      "Sneha is preparing for her board exams and needs textbooks, guides, and practice material.",
+      "Sneha is a bright student wanting to pursue a career in project management but lacks resources for certification.",
   },
   {
     id: 3,
     name: "Imran Khan",
     grade: "12th",
-    category: "Exam Coaching",
-    urgency: "Low",
+    category: "Certificate Sponsorship",
+    urgency: "Medium",
     required: 12000,
     raised: 4000,
-    summary: "Help Imran join entrance coaching classes.",
+    summary: "Help Imran become a video editing expert, by buying him premium courses.",
     background:
-      "Imran wants to pursue engineering and needs coaching support to prepare for entrance exams.",
+      "Imran wants to pursue professional video editing courses to enhance his skills but cannot afford the fees.",
   },
 ];
 
@@ -68,7 +68,7 @@ const Sponsor = () => {
             SPONSOR STUDENT PROJECT
           </h1>
           <p className="text-gray-600 mt-2 text-sm md:text-base">
-            Support students by sponsoring their education, books, or coaching.
+            Support students by sponsoring their education, courses and necessary technical resources.
           </p>
         </div>
       </div>
