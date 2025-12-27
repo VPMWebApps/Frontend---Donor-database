@@ -19,6 +19,10 @@ const Navbar = () => {
         <NavLink to="/csr-requirement" className={linkClass}>CSR REQUIREMENT</NavLink>
         <NavLink to="/ngo-partners" className={linkClass}>NGO PARTNERS</NavLink>
         <NavLink to="/sponsor-sp" className={linkClass}>SPONSOR STUDENT PROJECT</NavLink>
+        <button className="absolute right-8 top-8 bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 text-sm cursor-pointer">
+          LOGIN
+        </button>
+
       </div>
     </nav>
   );

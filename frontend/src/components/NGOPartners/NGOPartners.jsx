@@ -95,7 +95,7 @@ const NGOPartners = () => {
                     Csr Spoc - {donor.roles.spoc}
                   </p>
                   <p>
-                    <span className="font-semibold">Company Requirement:</span>{" "}
+                    <span className="font-semibold">Designation:</span>{" "}
                     {donor.roles.requirement}
                   </p>
                   <p>
