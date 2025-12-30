@@ -118,9 +118,9 @@ const NGOPartners = () => {
                   {donor.email}
                 </p>
               </div>
-              <button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm">
+              <button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm cursor-pointer">
                 <FaSearch />
-                Check due to diligence
+                Check due to diligence status
               </button>
             </div>
           </div>

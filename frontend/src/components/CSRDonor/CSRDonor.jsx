@@ -1,7 +1,10 @@
 import React from "react";
 import { FaSearch, FaFilter } from "react-icons/fa";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const donors = [
+
   {
     name: "ABC COMPANY",
     url: "abc.com",
@@ -41,6 +44,16 @@ const donors = [
 ];
 
 const CSRDonor = () => {
+
+  const navigate = useNavigate();
+  const role = localStorage.getItem("role") || "guest";
+
+  useEffect(() => {
+    if (role === "guest") {
+      navigate("/", { replace: true });
+    }
+  }, [role, navigate]);
+
   return (
     <div className="min-h-screen bg-gray-50 px-6 py-10">
       <h2 className="text-2xl font-bold mb-6">CSR DONOR</h2>
@@ -118,9 +131,9 @@ const CSRDonor = () => {
                   {donor.email}
                 </p>
               </div>
-              <button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm">
+              <button className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm cursor-pointer">
                 <FaSearch />
-                Check due to diligence
+                Check due to diligence status
               </button>
             </div>
           </div>
