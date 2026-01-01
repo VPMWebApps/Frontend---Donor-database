@@ -13,7 +13,7 @@ const linkClass = ({ isActive }) =>
 const Navbar = () => {
   const navigate = useNavigate();
   // auth state
-  const [role, setRole] = useState(localStorage.getItem("role") || "guest"); // guest | admin | staff | management
+  const [role, setRole] = useState(localStorage.getItem("role") || "guest"); // guest 
   const [showLogin, setShowLogin] = useState(false);
 
   const isGuest = role === "guest";
