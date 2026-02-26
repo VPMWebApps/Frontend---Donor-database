@@ -1,63 +1,52 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect} from "react";
 
-
-
-
 const linkClass = ({ isActive }) =>
   `transition-colors duration-200 font-semibold text-sm
    ${isActive 
-     ? "text-pink-800" 
-     : "text-pink-600 hover:text-pink-800 hover:underline"}`;
+     ? "text-[#D4AF37]" 
+     : "text-white hover:text-[#D4AF37] hover:underline"}`;
 
 const Navbar = () => {
   const navigate = useNavigate();
-  // auth state
-  const [role, setRole] = useState(localStorage.getItem("role") || "guest"); // guest 
+  const [role, setRole] = useState(localStorage.getItem("role") || "guest");
   const [showLogin, setShowLogin] = useState(false);
 
   const isGuest = role === "guest";
 
-  // mock login submit
   const handleLogin = (e) => {
-  e.preventDefault();
+    e.preventDefault();
+    const email = e.target.email.value;
 
-  const email = e.target.email.value;
+    if (email === "admin@vpm.com") {
+      setRole("admin");
+    } else if (email === "staff@vpm.com") {
+      setRole("staff");
+    } else if (email === "management@vpm.com") {
+      setRole("management");
+    } else {
+      alert("Invalid credentials");
+      return;
+    }
 
-  if (email === "admin@vpm.com") {
     setRole("admin");
-  } else if (email === "staff@vpm.com") {
-    setRole("staff");
-  } else if (email === "management@vpm.com") {
-    setRole("management");
-  } else {
-    alert("Invalid credentials");
-    return;
-  }
-
-  setRole("admin");
-  setShowLogin(false);
-  localStorage.setItem("role", "admin"); // blocked URL access for guest
-
-};
-
-
-  // logout fix
-  const handleLogout = () => {
-  setRole("guest");
-  localStorage.removeItem("role"); 
-  navigate("/", { replace: true });
+    setShowLogin(false);
+    localStorage.setItem("role", "admin");
   };
 
+  const handleLogout = () => {
+    setRole("guest");
+    localStorage.removeItem("role"); 
+    navigate("/", { replace: true });
+  };
 
   return (
-    <nav className="bg-white sticky top-0 z-50 shadow-md py-4 px-8 flex flex-col items-center relative">
+    <nav className="bg-[#1E2A38] sticky top-0 z-50 shadow-md py-4 px-8 flex flex-col items-center relative">
 
-      {/* Top row */}
       <div className="grid grid-cols-3 items-center w-full px-4 py-3">
         <div></div>
 
-        <h1 className="text-xl font-bold text-center">
+        <h1 className="text-xl font-bold text-center text-white">
           VPM TRUST
         </h1>
 
@@ -65,14 +54,14 @@ const Navbar = () => {
           {isGuest ? (
             <button
               onClick={() => setShowLogin(true)}
-              className="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 text-sm cursor-pointer"
+              className="bg-[#D4AF37] text-[#1E2A38] px-6 py-2 rounded-full hover:bg-[#C49B2F] text-sm cursor-pointer"
             >
               LOGIN
             </button>
           ) : (
             <button
               onClick={handleLogout}
-              className="bg-gray-200 text-gray-800 px-6 py-2 rounded-full text-sm cursor-pointer"
+              className="bg-[#D4AF37] text-[#1E2A38] px-6 py-2 rounded-full hover:bg-[#C49B2F] text-sm cursor-pointer"
             >
               LOGOUT
             </button>
@@ -80,7 +69,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Navigation */}
       <div className="flex gap-6 flex-wrap justify-center"> 
         <NavLink to="/" end className={linkClass}>VOLUNTEERING EVENT</NavLink>
         <NavLink to="/research" className={linkClass}>DONATE FOR RESEARCH</NavLink>
@@ -96,18 +84,17 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Login Modal */}
       {showLogin && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <form
             onSubmit={handleLogin}
             className="bg-white p-6 rounded-lg w-80 shadow-lg"
           >
-            <h2 className="text-lg font-semibold mb-4">Login</h2>
+            <h2 className="text-lg font-semibold mb-4 text-[#1E2A38]">Login</h2>
 
             <input
               type="email"
-              name="email"   
+              name="email"
               placeholder="Email"
               required
               className="w-full mb-3 border px-3 py-2 rounded"
@@ -115,7 +102,7 @@ const Navbar = () => {
 
             <input
               type="password"
-              name="password"   
+              name="password"
               placeholder="Password"
               required
               className="w-full mb-4 border px-3 py-2 rounded"
@@ -125,14 +112,14 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => setShowLogin(false)}
-                className="text-sm"
+                className="text-sm text-[#1E2A38]"
               >
                 Cancel
               </button>
 
               <button
                 type="submit"
-                className="bg-pink-600 text-white px-4 py-2 rounded text-sm"
+                className="bg-[#D4AF37] text-[#1E2A38] px-4 py-2 rounded text-sm hover:bg-[#C49B2F]"
               >
                 Login
               </button>

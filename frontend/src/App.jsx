@@ -23,7 +23,7 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <Router>
-      <div className="bg-pink-100 min-h-screen">
+      <div className="#F4D6D6 min-h-screen">
         <Navbar />
         <Routes>
           <Route path="/individual-donor" element={<ProtectedRoute><IndividualDonor /></ProtectedRoute>} />
