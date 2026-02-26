@@ -112,14 +112,14 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => setShowLogin(false)}
-                className="text-sm text-[#1E2A38]"
+                className="text-sm text-[#1E2A38] cursor-pointer"
               >
                 Cancel
               </button>
 
               <button
                 type="submit"
-                className="bg-[#D4AF37] text-[#1E2A38] px-4 py-2 rounded text-sm hover:bg-[#C49B2F]"
+                className="bg-[#D4AF37] text-[#1E2A38] px-4 py-2 rounded text-sm hover:bg-[#C49B2F] cursor-pointer"
               >
                 Login
               </button>
