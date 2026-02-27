@@ -1,6 +1,6 @@
 function VolunteerEvents() {
   return (
-    <div className="p-6 bg-[#F4D6D6] min-h-screen">
+    <div className="p-6 bg-[#f5e2e2] min-h-screen">
       <img
         src="src/images/vpm_pic1.jpg"
         alt="Event Group"

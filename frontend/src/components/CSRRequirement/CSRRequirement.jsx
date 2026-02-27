@@ -1,6 +1,6 @@
 const CSRRequirement = () => {
   return (
-    <div className="min-h-screen bg-[#F4D6D6] p-10">
+    <div className="min-h-screen bg-[#f5e2e2] p-10">
       <div className="flex flex-col md:flex-row justify-center gap-8">
         
         {/* Card 1 */}

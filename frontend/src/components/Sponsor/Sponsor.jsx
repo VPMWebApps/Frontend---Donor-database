@@ -61,7 +61,7 @@ const Sponsor = () => {
   });
 
   return (
-    <div className="p-6 bg-[#F4D6D6] min-h-screen">
+    <div className="p-6 bg-[#f5e2e2] min-h-screen">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-black">
@@ -137,7 +137,7 @@ const Sponsor = () => {
                   <h2 className="text-lg font-semibold text-black">
                     {student.name}
                   </h2>
-                  <span className="text-xs px-2 py-1 rounded-full bg-[#F4D6D6] text-black">
+                  <span className="text-xs px-2 py-1 rounded-full bg-[#f5e2e2] text-black">
                     {student.grade}
                   </span>
                 </div>
@@ -160,7 +160,7 @@ const Sponsor = () => {
                     <span>Required: ₹{student.required}</span>
                   </div>
 
-                  <div className="w-full h-2 bg-[#F4D6D6] rounded-full overflow-hidden">
+                  <div className="w-full h-2 bg-[#f5e2e2] rounded-full overflow-hidden">
                     <div
                       className="h-2 bg-[#FFD60A]"
                       style={{ width: `${progress}%` }}
@@ -175,7 +175,7 @@ const Sponsor = () => {
 
               <div className="flex justify-between gap-2 mt-3">
                 <button
-                  className="px-3 py-2 text-xs rounded-md border border-[#016772] text-black hover:bg-[#F4D6D6] cursor-pointer"
+                  className="px-3 py-2 text-xs rounded-md border border-[#016772] text-black hover:bg-[#f5e2e2] cursor-pointer"
                   onClick={() => setSelectedStudent(student)}
                 >
                   View Profile
@@ -228,7 +228,7 @@ const Sponsor = () => {
 
             <div className="flex justify-end gap-2">
               <button
-                className="px-4 py-2 text-sm rounded-md border border-[#016772] text-black hover:bg-[#F4D6D6] cursor-pointer"
+                className="px-4 py-2 text-sm rounded-md border border-[#016772] text-black hover:bg-[#f5e2e2] cursor-pointer"
                 onClick={() => setSelectedStudent(null)}
               >
                 Close

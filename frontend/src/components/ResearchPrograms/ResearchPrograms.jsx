@@ -6,7 +6,7 @@ function ResearchPrograms() {
   ];
 
   return (
-    <div className="p-6 space-y-6 bg-[#F4D6D6] min-h-screen">
+    <div className="p-6 space-y-6 bg-[#f5e2e2] min-h-screen">
       
       <div className="bg-white rounded-xl shadow p-6 flex flex-col md:flex-row items-center justify-between border border-[#FFD60A]">
         
@@ -51,7 +51,7 @@ function ResearchPrograms() {
           {programs.map((prog, idx) => (
             <li
               key={idx}
-              className="flex justify-between items-center bg-[#F4D6D6] p-4 rounded-lg border border-[#FFD60A]"
+              className="flex justify-between items-center bg-[#f5e2e2] p-4 rounded-lg border border-[#FFD60A]"
             >
               <div>
                 <h4 className="font-semibold text-black">
@@ -64,7 +64,7 @@ function ResearchPrograms() {
               </div>
 
               <div className="space-x-2">
-                <button className="border border-[#016772] text-black text-xs px-3 py-1 rounded hover:bg-[#F4D6D6] cursor-pointer">
+                <button className="border border-[#016772] text-black text-xs px-3 py-1 rounded hover:bg-[#f5e2e2] cursor-pointer">
                   Download
                 </button>
 

@@ -25,7 +25,7 @@ const IndividualDonor = () => {
   );
 
   return (
-    <div className="p-6 bg-[#F4D6D6] min-h-screen">
+    <div className="p-6 bg-[#f5e2e2] min-h-screen">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <h1 className="text-3xl font-bold mb-4 tracking-tight text-black">
           INDIVIDUAL DONOR

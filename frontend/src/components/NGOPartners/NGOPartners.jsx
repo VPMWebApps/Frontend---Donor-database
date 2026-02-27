@@ -42,7 +42,7 @@ const donors = [
 
 const NGOPartners = () => {
   return (
-    <div className="min-h-screen bg-[#F4D6D6] px-6 py-10">
+    <div className="min-h-screen bg-[#f5e2e2] px-6 py-10">
       <h2 className="text-2xl font-bold mb-6 text-black">
         NGO PARTNERS
       </h2>
