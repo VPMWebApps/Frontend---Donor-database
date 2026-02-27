@@ -1,11 +1,11 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 const linkClass = ({ isActive }) =>
   `transition-colors duration-200 font-semibold text-sm
    ${isActive 
-     ? "text-[#D4AF37]" 
-     : "text-white hover:text-[#D4AF37] hover:underline"}`;
+     ? "text-[#FFD60A]" 
+     : "text-white hover:text-[#FFD60A] hover:underline"}`;
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -36,17 +36,20 @@ const Navbar = () => {
 
   const handleLogout = () => {
     setRole("guest");
-    localStorage.removeItem("role"); 
+    localStorage.removeItem("role");
     navigate("/", { replace: true });
   };
 
   return (
-    <nav className="bg-[#1E2A38] sticky top-0 z-50 shadow-md py-4 px-8 flex flex-col items-center relative">
+    <nav className="bg-[#016772] sticky top-0 z-50 shadow-md py-4 px-8 flex flex-col items-center relative">
 
       <div className="grid grid-cols-3 items-center w-full px-4 py-3">
         <div></div>
 
-        <h1 className="text-xl font-bold text-center text-white">
+        <h1
+          className="text-2xl font-bold text-center text-white tracking-[0.1em]"
+          style={{ fontFamily: "'Cinzel', serif" }}
+        >
           VPM TRUST
         </h1>
 
@@ -54,14 +57,14 @@ const Navbar = () => {
           {isGuest ? (
             <button
               onClick={() => setShowLogin(true)}
-              className="bg-[#D4AF37] text-[#1E2A38] px-6 py-2 rounded-full hover:bg-[#C49B2F] text-sm cursor-pointer"
+              className="bg-[#FFD60A] text-[#016772] px-6 py-2 rounded-full hover:bg-[#E6B800] text-sm cursor-pointer"
             >
               LOGIN
             </button>
           ) : (
             <button
               onClick={handleLogout}
-              className="bg-[#D4AF37] text-[#1E2A38] px-6 py-2 rounded-full hover:bg-[#C49B2F] text-sm cursor-pointer"
+              className="bg-[#FFD60A] text-[#016772] px-6 py-2 rounded-full hover:bg-[#E6B800] text-sm cursor-pointer"
             >
               LOGOUT
             </button>
@@ -69,17 +72,31 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex gap-6 flex-wrap justify-center"> 
-        <NavLink to="/" end className={linkClass}>VOLUNTEERING EVENT</NavLink>
-        <NavLink to="/research" className={linkClass}>DONATE FOR RESEARCH</NavLink>
-        <NavLink to="/sponsor-sp" className={linkClass}>SPONSOR STUDENT PROJECT</NavLink>
-        <NavLink to="/csr-requirement" className={linkClass}>CSR REQUIREMENT</NavLink>
+      <div className="flex gap-6 flex-wrap justify-center">
+        <NavLink to="/" end className={linkClass}>
+          VOLUNTEERING EVENT
+        </NavLink>
+        <NavLink to="/research" className={linkClass}>
+          DONATE FOR RESEARCH
+        </NavLink>
+        <NavLink to="/sponsor-sp" className={linkClass}>
+          SPONSOR STUDENT PROJECT
+        </NavLink>
+        <NavLink to="/csr-requirement" className={linkClass}>
+          CSR REQUIREMENT
+        </NavLink>
 
         {!isGuest && (
           <>
-            <NavLink to="/individual-donor" className={linkClass}>INDIVIDUAL DONOR</NavLink>
-            <NavLink to="/csr-donor" className={linkClass}>CSR DONOR</NavLink>
-            <NavLink to="/ngo-partners" className={linkClass}>NGO PARTNERS</NavLink>
+            <NavLink to="/individual-donor" className={linkClass}>
+              INDIVIDUAL DONOR
+            </NavLink>
+            <NavLink to="/csr-donor" className={linkClass}>
+              CSR DONOR
+            </NavLink>
+            <NavLink to="/ngo-partners" className={linkClass}>
+              NGO PARTNERS
+            </NavLink>
           </>
         )}
       </div>
@@ -90,7 +107,9 @@ const Navbar = () => {
             onSubmit={handleLogin}
             className="bg-white p-6 rounded-lg w-80 shadow-lg"
           >
-            <h2 className="text-lg font-semibold mb-4 text-[#1E2A38]">Login</h2>
+            <h2 className="text-lg font-semibold mb-4 text-[#016772]">
+              Login
+            </h2>
 
             <input
               type="email"
@@ -112,14 +131,14 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => setShowLogin(false)}
-                className="text-sm text-[#1E2A38] cursor-pointer"
+                className="text-sm text-[#016772] cursor-pointer"
               >
                 Cancel
               </button>
 
               <button
                 type="submit"
-                className="bg-[#D4AF37] text-[#1E2A38] px-4 py-2 rounded text-sm hover:bg-[#C49B2F] cursor-pointer"
+                className="bg-[#FFD60A] text-[#016772] px-4 py-2 rounded text-sm hover:bg-[#E6B800] cursor-pointer"
               >
                 Login
               </button>

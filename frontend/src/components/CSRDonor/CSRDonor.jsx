@@ -43,7 +43,6 @@ const donors = [
 ];
 
 const CSRDonor = () => {
-
   const navigate = useNavigate();
   const role = localStorage.getItem("role") || "guest";
 
@@ -55,24 +54,26 @@ const CSRDonor = () => {
 
   return (
     <div className="min-h-screen bg-[#F4D6D6] px-6 py-10">
-      <h2 className="text-2xl font-bold mb-6 text-[#1E2A38]">
+      <h2 className="text-2xl font-bold mb-6 text-black">
         CSR DONOR
       </h2>
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm w-full md:max-w-md">
-          <FaSearch className="text-[#1E2A38] mr-2" />
+          <FaSearch className="text-black mr-2" />
           <input
             type="text"
             placeholder="Search by company, referred, etc."
-            className="flex-grow outline-none text-sm text-[#1E2A38]"
+            className="flex-grow outline-none text-sm text-black"
           />
         </div>
+
         <div className="flex gap-2">
-          <button className="bg-[#D4AF37] text-[#1E2A38] px-4 py-2 rounded-md hover:bg-[#C49B2F] text-sm cursor-pointer">
+          <button className="bg-[#FFD60A] text-[#016772] px-4 py-2 rounded-md hover:bg-[#E6B800] text-sm cursor-pointer">
             Edit
           </button>
-          <button className="flex items-center gap-1 border border-[#1E2A38] px-3 py-2 rounded-md text-sm text-[#1E2A38] hover:bg-[#D4AF37] cursor-pointer">
+
+          <button className="flex items-center gap-1 border border-[#016772] px-3 py-2 rounded-md text-sm text-black hover:bg-[#FFD60A] cursor-pointer">
             <FaFilter />
             Filter By
           </button>
@@ -83,24 +84,29 @@ const CSRDonor = () => {
         {donors.map((donor, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl border-2 border-[#D4AF37] shadow-sm flex flex-col md:flex-row justify-between gap-6"
+            className="bg-white p-6 rounded-xl border-2 border-[#FFD60A] shadow-sm flex flex-col md:flex-row justify-between gap-6"
           >
             <div className="flex gap-4 items-start">
               <div className="w-16 h-16 bg-[#F4D6D6] rounded-full flex-shrink-0" />
               <div>
-                <h3 className="text-lg font-semibold text-[#1E2A38]">
+                <h3 className="text-lg font-semibold text-black">
                   {donor.name}
                 </h3>
+
                 <a
                   href={`https://${donor.url}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#D4AF37] text-sm hover:text-[#C49B2F]"
+                  className="text-[#FFD60A] text-sm hover:text-[#E6B800]"
                 >
                   {donor.url}
                 </a>
-                <p className="text-sm text-[#1E2A38]">{donor.location}</p>
-                <div className="mt-2 space-y-1 text-sm text-[#1E2A38]">
+
+                <p className="text-sm text-black">
+                  {donor.location}
+                </p>
+
+                <div className="mt-2 space-y-1 text-sm text-black">
                   <p>
                     <span className="font-semibold">Role:</span>{" "}
                     Csr Spoc - {donor.roles.spoc}
@@ -117,7 +123,7 @@ const CSRDonor = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-between gap-4 text-sm text-[#1E2A38]">
+            <div className="flex flex-col justify-between gap-4 text-sm text-black">
               <div>
                 <p>
                   <span className="font-semibold">Phone number:</span>{" "}
@@ -128,7 +134,8 @@ const CSRDonor = () => {
                   {donor.email}
                 </p>
               </div>
-              <button className="bg-[#D4AF37] hover:bg-[#C49B2F] text-[#1E2A38] px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm cursor-pointer">
+
+              <button className="bg-[#FFD60A] hover:bg-[#E6B800] text-[#016772] px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm cursor-pointer">
                 <FaSearch />
                 Check due to diligence status
               </button>
